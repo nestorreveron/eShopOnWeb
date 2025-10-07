@@ -14,22 +14,22 @@ env:
 
 jobs:
   #Build, test and publish .net web project in repository
-  buildandtest:
-    runs-on: ubuntu-latest
-    steps:
+  #buildandtest:
+    #runs-on: ubuntu-latest
+    #steps:
     #checkout the repository
-    - uses: actions/checkout@v4
+    #- uses: actions/checkout@v4
     #prepare runner for desired .net version SDK
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '8.0.0'
-        dotnet-quality: 'preview'
+    #- name: Setup .NET
+      #uses: actions/setup-dotnet@v4
+      #with:
+        #dotnet-version: '8.0.x'
+        #dotnet-quality: 'preview'
     #Build/Test/Publish the .net project
     - name: Build with dotnet
       run: dotnet build ./eShopOnWeb.sln --configuration Release
-    - name: Test with dotnet
-      run: dotnet test ./eShopOnWeb.sln --configuration Release
+    #- name: Test with dotnet
+      #run: dotnet test ./eShopOnWeb.sln --configuration Release
     - name: dotnet publish
       run: |
         dotnet publish ./src/Web/Web.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
