@@ -9,7 +9,7 @@ env:
   LOCATION: spaincentral
   TEMPLATE-FILE: infra/webapp.bicep
   SUBSCRIPTION-ID: 239a12fd-fdfd-4e9d-8cec-45c05d6c6c9a
-  WEBAPP-NAME: eshoponweb-webapp-indra25
+  WEBAPP-NAME: eshoponweb-webapp-indra25-nestor
 
 
 jobs:
